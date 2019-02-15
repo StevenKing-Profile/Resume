@@ -1,0 +1,100 @@
+\documentclass[final]{letter}
+
+\usepackage{nopageno}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{comment}
+\usepackage{fullpage}
+
+\useunder{\uline}{\ulined}{}
+\DeclareUrlCommand{\bulurl}{\def\UrlFont{\ttfamily\color{blue}\ulined}}
+
+\usepackage{tabularx} % For adjustable-column-width tables
+\usepackage{fix-cm} % For XL font
+
+% Adjust margins
+\addtolength{\textwidth}{1.0in}
+\addtolength{\hoffset}{-.6in}
+\addtolength{\textheight}{1.6in}
+\addtolength{\voffset}{-.7in}
+
+
+\begin{comment}
+use these somewhere Spring Boot, Java, JPA, SQL, Angular, and JSP/jQuery/Bootstrap \\
+\end{comment}
+
+\begin{document}
+	\begin{center}
+		{\fontsize{35}{40}\selectfont\bf{Steven King}}
+		{\hfill
+			\begin{tabular}{c c}
+				nfstevenking@gmail.com  					&\\ \ \-\ \  (678) 886-6815  					&\\ \ \-\ \  \bulurl{http://stevenking.net/} \hfill
+			\end{tabular}
+		}
+		\rule{.99\textwidth}{1pt}
+		
+		\addvspace{.5cm}
+		
+		\begin{tabularx}
+			{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X} Employment 
+				& \large\bf{Software Developer \hfill General Motors \hfill April 2017 - Present} \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Primarily developed an interal web application designed to assist with vehicle recalls and over the air updates \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Implemented Angular Components/Modules/Directives and RESTful Java API services that communicate with each other using Zuul \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Aided with migrating from an on-premise tomcat server to PCF and establishing automated deployments using Jenkins and CARA technologies \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Maintained and constructed KAFKA topics and their corresponding JSONs between our consumers and producers \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Constructed and updated an in memory hsql database to perform test driven development alongside JUnit tests using EclipseLink \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Dedicated scrum master for a 6 person development team. Helped lead scrum ceremonies for 2 week agile sprints utilizing JIRA/Confluence and its various  reports \\
+					&\\
+
+				& \large\bf{Software Engineer, Intern \hfill Experient Group \hfill 2016} \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Created and allocated org, spaces, roles, and permissions for a cloudfoundry space using the Cloud Foundry CLI \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Updated a legacy website's content and migrated it to cloudfoundry \\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Created a script to disable/enable/edit cloudwatch alarms using python 2 and the AWS CLI \\
+					&\\
+
+				& \large\bf{Resident Assistant \hfill UGA Housing \hfill 2013 -  2016}\\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Remained “on-call” from 5 P.M. to 8 A.M. as assigned\\
+					& \hspace{.75cm}\hangindent=1.2cm o \ Mentored and served 50 first-year students within a STEM Learning Community \\
+		\end{tabularx}
+
+		\addvspace{.5cm}
+
+		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X}
+			Skills & \large\bf{Languages}\\
+				& \hspace{.5cm}Experienced:		Java, SQL, Git \\
+				& \hspace{.5cm}Familiar:			Angular, Typescript \\
+				& \hspace{.5cm}Light Use:  		Python, NoSQL \\
+				&\\
+
+			& \large\bf{Tools}\\
+				& \hspace{.5cm}Experienced: 		Jenkins, Maven, Swagger, JUnit,  SQL Server \\
+				& \hspace{.5cm}Familiar: 			Kafka, Selenium, Protractor, LaTeX \\
+				& \hspace{.5cm}Operating Systems: 	Windows, Linux Red Hat Family (CentOS) \\
+		\end{tabularx}
+
+		\addvspace{.5cm}
+
+		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X}
+			Projects and & \large\bf{RecDawgs: A Recreational Sports Management System}\\
+			Schoolwork 
+			& The term project for my college Software Engineering course. A generic 3 tier architecture that uses twitter bootstrap and jQuery, Java, and MySQL DB using Hibernate.  \\
+			& \hspace{.5cm}\hangindent=0.9cm o \ This project specifically includes detailed requirements document, UML/Class diagrams, sequence diagrams, an analysis document, and a system design document. \\
+		\end{tabularx}
+
+		\addvspace{.5cm}
+
+		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X}
+			Education 
+			& \Large\bf{Bachelor of Science in Computer Science  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2016}\\
+			& \large{The University of Georgia, Athens, GA}\\
+			& \hspace{.5cm}GPA: 3.4/4.0\\
+		\end{tabularx}
+
+		\addvspace{.5cm}
+
+		\textit{Code samples and additional projects are accessible at http://stevenking.net}		
+			
+	\end{center}
+\end{document}
