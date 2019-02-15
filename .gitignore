@@ -1,0 +1,5 @@
+# Generated LaTeX files
+*.aux
+*.out
+*.synctex.gz
+*.log
