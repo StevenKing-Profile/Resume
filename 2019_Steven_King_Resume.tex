@@ -9,6 +9,8 @@
 \usepackage{fullpage}
 \usepackage{tabularx} % For adjustable-column-width tables
 \usepackage{fix-cm} % For XL font
+\usepackage{tabto}
+\NumTabs{3}
 
 \useunder{\uline}{\ulined}{}
 
@@ -20,13 +22,16 @@
 \def\B{\parindent1.75em\makebox[1.5em][l]{$\bullet$}\hangindent3.25em}
 \DeclareUrlCommand{\bulurl}{\def\UrlFont{\ttfamily\color{blue}\ulined}}
 
+\newlength{\tabcont}
+
 \begin{comment}
 use these somewhere Spring Boot, Java, JPA, SQL, Angular, and JSP/jQuery/Bootstrap \\
 \end{comment}
 
 \begin{document}
 	\begin{center}
-		{\fontsize{40}{40}\selectfont\bf{Steven King}}
+		\vspace*{.25cm}
+		{\fontsize{40}{10}\selectfont\bf{Steven King}}
 		{\hfill
 			\begin{tabular}{c}
 				\large\bf{nfstevenking@gmail.com \hspace{.75cm} (678)886-6815}
@@ -37,7 +42,7 @@ use these somewhere Spring Boot, Java, JPA, SQL, Angular, and JSP/jQuery/Bootstr
 		\addvspace{.5cm}
 		
 		\begin{tabularx}
-			{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X} Employment 
+			{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Employment 
 				& \large\bf{Software Developer \hfill General Motors \hfill April 2017 - Present} \\
 					& \B Developed an interal web application that schedules and assists with vehicle recalls and over the air updates \\
 					& \B Implemented Angular Components/Modules/Directives and RESTful Java API services that communicate with each other using Zuul \\
@@ -45,48 +50,37 @@ use these somewhere Spring Boot, Java, JPA, SQL, Angular, and JSP/jQuery/Bootstr
 					& \B Maintained/constructed KAFKA topics and their corresponding JSONs between producers/consumers \\
 					& \B Updated an in memory hsql database to perform test driven development alongside JUnit tests using EclipseLink \\
 					& \B Dedicated scrum master for a 6 person development team. Helped lead scrum ceremonies for 2 week agile sprints utilizing JIRA/Confluence and its various  reports \\
-					&\\
+					\\
 
 				& \large\bf{Software Engineer, Intern \hfill Experient Group \hfill 2016} \\
 					& \B Created and allocated org, spaces, roles, and permissions for a cloudfoundry space using the Cloud Foundry CLI \\
-					& \B Updated a legacy website's content, upgraded twitter bootstrap 2 to 3, updated jquery version, and migrated it to cloudfoundry \\
+					& \B Updated a legacy website's content, upgraded twitter bootstrap from version 2 to 3, updated jQuery version, and migrated it to cloudfoundry \\
 					& \B Created a script to disable/enable/edit cloudwatch alarms using python 2 and the AWS CLI \\
-					&\\
+					\\
 
 				& \large\bf{Resident Assistant \hfill UGA Housing \hfill 2013 -  2016}\\
 					& \B Remained “on-call” from 5 P.M. to 8 A.M. as assigned\\
-					& \B Hosted technology workshops every semester for 50 first-year students within a STEM Learning Community \\
+					& \B Hosted technology workshops every semester for 50 first-year students within a STEM Learning Community
 		\end{tabularx}
 
 		\addvspace{.5cm}
 
 		\begin{tabularx}
-			{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X} Skills
-				& \\
-				& \begin{tabular*}{10em}{p{10.5em}p{50em}}
-					{\bf Backend:} & Java, Spring/Spring Boot, light Python \\
-					{\bf Frontend:} & Angular, Typescript, jQuery, AJAX, HTML5, CSS \\
-					{\bf Databases:} & SQL, light DynamoDB \\
-					{\bf Build Tools:} & Maven, Jenkins, JFrog Artifactory, light Gradle \\
-					{\bf Version Control:} & Git  \\
-					{\bf Testing Frameworks:} & JUnit, Selenium, Protractor \\
-					{\bf Web App Servers:} & PCF, CF, Nginx, Tomcat, Apache \\
-					{\bf Programming Tools:} & Swagger, Atlassian Product Suite, light Docker
-				\end{tabular*}
+			{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Skills	
+					& {\bf Backend:}\tab{Java, Spring/Spring Boot, light Python} \\
+					& {\bf Frontend:}\tab{Angular, Typescript, jQuery, AJAX, HTML5, CSS} \\
+					& {\bf Databases:}\tab{SQL, light DynamoDB} \\
+					& {\bf Build Tools:}\tab{Maven, Jenkins, JFrog Artifactory, light Gradle} \\
+					& {\bf Version Control:}\tab{Git}  \\
+					& {\bf Testing Frameworks:}\tab{JUnit, Selenium, Protractor} \\
+					& {\bf Web App Servers:}\tab{PCF, CF, Nginx, Tomcat, Apache} \\
+					& {\bf Programming Tools:}\tab{Swagger, Atlassian Product Suite, light Docker}
 		\end{tabularx}
 
 		\addvspace{.5cm}
 
 		\begin{tabularx}
-			{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X} Projects and & \large\bf{RecDawgs: A Recreational Sports Management System}\\Schoolwork 
-				& The term project for my college Software Engineering course. A generic 3 tier architecture that uses twitter bootstrap and jQuery, Java, and MySQL DB using Hibernate.  \\
-				& \B This project specifically includes detailed requirements document, UML/Class diagrams, sequence diagrams, an analysis document, and a system design document. \\
-		\end{tabularx}
-
-		\addvspace{.5cm}
-
-		\begin{tabularx}
-			{\linewidth}{>{\raggedright\bf\Large{}}p{3.5cm}X}Education 
+			{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X}Education 
 				& \Large\bf{Bachelor of Science in Computer Science  \hfill 2016}\\
 				& \large{The University of Georgia, Athens, GA}\\
 				& \hspace{1.75em}GPA: 3.4/4.0\\
@@ -94,7 +88,15 @@ use these somewhere Spring Boot, Java, JPA, SQL, Angular, and JSP/jQuery/Bootstr
 
 		\addvspace{.5cm}
 
-		\textit{Code samples and additional projects are accessible at http://stevenking.net}		
+		\begin{tabularx}
+			{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Projects and & \large\bf{RecDawgs: A Recreational Sports Management System}\\Schoolwork 
+				& The term project for my college Software Engineering course. A generic 3 tier architecture that uses twitter bootstrap and jQuery, Java, and MySQL DB using Hibernate.  \\
+				& \B This project specifically includes detailed requirements document, UML/Class diagrams, sequence diagrams, an analysis document, and a system design document. \\
+		\end{tabularx}
+
+		\addvspace{.5cm}
+	
+		\parindent4em\textit{Code samples and additional projects are accessible at http://stevenking.net}		
 			
 	\end{center}
 \end{document}
