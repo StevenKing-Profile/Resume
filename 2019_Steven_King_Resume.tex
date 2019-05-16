@@ -4,6 +4,11 @@
 \usepackage{rotating}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue},
+    urlcolor={blue}
+}
 \usepackage[normalem]{ulem}
 \usepackage{comment}
 \usepackage{fullpage}
@@ -28,7 +33,7 @@
 		{\fontsize{40}{10}\selectfont\bf{Steven King}}
 		{\hfill
 			\begin{tabular}{c}
-				\large\bf{career@stevenking.net \hspace{1cm} 775-572-8773}
+				\large\bf{\href{mailto:career@stevenking.net}{career@stevenking.net} \hspace{1cm} 775-572-8773}
 			\end{tabular}
 		}
 		\rule{.99\textwidth}{1pt}	
@@ -85,6 +90,6 @@
 		\end{tabularx}
 
 		\addvspace{.5cm}
-		\parindent4em\textit{Code samples and additional projects are accessible at https://stevenking.net}			
+		\parindent4em\textit{Code samples and additional projects are accessible at \url{https://stevenking.net}}
 	\end{center}
 \end{document}
