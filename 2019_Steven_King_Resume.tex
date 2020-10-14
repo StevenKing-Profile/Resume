@@ -4,94 +4,82 @@
 \usepackage{rotating}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\hypersetup{
-    colorlinks,
-    linkcolor={blue},
-    urlcolor={blue}
-}
 \usepackage[normalem]{ulem}
 \usepackage{comment}
 \usepackage{fullpage}
 \usepackage{tabularx} % For adjustable-column-width tables
 \usepackage{fix-cm} % For XL font
 \usepackage{tabto}
+\usepackage{enumitem}
 
-\NumTabs{2}
+\hypersetup{
+	colorlinks,
+	linkcolor={blue},
+	urlcolor={blue}
+}
 
-\useunder{\uline}{\ulined}{}
-\DeclareUrlCommand{\bulurl}{\def\UrlFont{\ttfamily\color{blue}\ulined}}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\hoffset}{-.8in}
+\addtolength{\voffset}{-.5in}
+\addtolength{\textheight}{2cm}
 
-\addtolength{\textwidth}{1.0in}
-\addtolength{\hoffset}{-.6in}
-\addtolength{\textheight}{1.6in}
-\addtolength{\voffset}{-.7in}
-
-\def\B{\parindent1.75em\makebox[1.5em][l]{$\bullet$}\hangindent3.25em}
+\NumTabs{3}
 
 \begin{document}
 	\begin{center}
-		{\fontsize{40}{10}\selectfont\bf{Steven King}}
-		{\hfill
-			\begin{tabular}{c}
-				\large\bf{\href{mailto:career@stevenking.net}{career@stevenking.net} \hspace{1cm} 775-572-8773}
-			\end{tabular}
-		}
+		{\fontsize{36}{64}\selectfont\bf{Steven King}} \hspace{.18cm} {
+			\begin{tabular}{c}\large\bf{\href{mailto:career@stevenking.net}{career@stevenking.net} \hspace{.2cm} 775-572-8773 (Google Voice)} \end{tabular}}
+		
 		\rule{.99\textwidth}{1pt}	
 
-		\addvspace{.4cm}
 		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Employment 
-			& \large\bf{Software Engineer \tab{Truist Financial} \hfill Aug. 2019 - Present } \\
-				& \B Aided in developing service discovery and reverse proxy/load blancing of 26 microservices using a variety of Netflix tools (Eureka, Zuul, Ribbon) \\
-				& \B Migrated these APIs spring boot versions from 1.5 to 2.0 and their corresponding cloud versioning  \\
-				& \B Made SAML Assertions to allow SSO   \\
-				& \B Created a Postman Team testing suite and standardized best coding practices including linters, code quality tools, and branch restrictions  \\
-
-			\\ & \large\bf{Software Developer \tab{General Motors} \hfill April 2017 - July 2019 } \\
-				& \B Implemented Angular Components/Modules/Directives using Angular and RESTful Java APIs using a variety of Spring projects  \\
-				& \B Created a GCP ingress to expose a front-end application to the real world and a service to allow this application to communicate with the backend pod \\
-				& \B Pushed Docker images to GCP pods using kubernettes and kubectl \\
-				& \B Created a Spring cloud config server to migrate properties into a seperate api, resulting in fewer deployments \\
-				& \B Maintained/constructed KAFKA topics and their corresponding JSONs between producers/consumers \\
-				& \B Dedicated scrum master for a 6 person development team. Helped lead scrum ceremonies for 2 week agile sprints utilizing JIRA/Confluence and its various reports \\
-
-			\\ & \large\bf{Software Engineer, Intern \tab{Experient Group} \hfill 2016} \\
-				& \B Created and allocated org, spaces, roles, and permissions for a cloudfoundry space using the Cloud Foundry CLI \\
-				& \B Developed and redesigned the consulting firms public website as according to a designer's template \\
-				& \B Created a script to disable/enable/edit cloudwatch alarms using python 2 and the Amazon Web Services CLI \\
-		\end{tabularx}
-
-		\addvspace{.4cm}
-		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Skills	
-			& {\bf Backend:}\tab{Java} \\
-			& {\bf Frontend:}\tab{Angular/Typescript, jQuery, HTML5/CSS} \\
-			& {\bf Databases:}\tab{SQL, MongoDB(light)} \\
-			& {\bf Build Tools:}\tab{Maven, Jenkins, JFrog Artifactory, Gradle (light) } \\
-			& {\bf Testing Frameworks:}\tab{JUnit, Mockito, SonarQube, Selenium, Protractor} \\
-			& {\bf Version Control:}\tab{Git} \\
-			& {\bf Web App Servers:}\tab{Google Cloud Platform, Nginx, Azure (light)} \\
-			& {\bf Programming Tools:}\tab{Postman, Docker, Kubernettes, Swagger)}
-		\end{tabularx}
-
-		\addvspace{.4cm}
-		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X}Projects
-			& \large\bf{WordCountTool.com} \\
-			&  A serverless Angular 6 web application that calculates the number of words in a textarea field, frequency of each word, and can manipulate the case of each word \\
-				& \B Uses the @ng-toolkit/universal project to pre-render HTML to improve SEO \\
-				& \B 5500 unique users per month according to Google Analytics \\
-			
-			\\ & \large\bf{Overwatch.guide} \\
-			&  A website made in Wordpress with a custom template for Blizzard's video game, Overwatch \\
-				& \B 34,000 pageviews per month according to Google Analytics \\
-		\end{tabularx}
+			& \large\bf{Software Engineer \hfill {Truist Financial} \hfill 08/2019 - Present } \\
+			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{2px}
+				\item Automated deployments of 20 Spring Boot microservices producing semantically versioned binaries using Gitlab CI/CD, Docker, Artifactory, and Amazon Elastic Container Registry
+				\item Contributed to creating a suite of financial components using Angular 9, Highcharts, and numerous RESTful Java APIs that consume internal and vendor data
+				\item Ingested critical Java APIs' logback files into Splunk, producing weekly reports, custom dashboards, and automated emails/notifications to appropriate resources upon failures
+				\item Migrated legacy Spring Boot versions from 1.5 to 2.0 and consistently maintained/patched maven and gradle dependencies
+				\item Standardized and enforced best coding practices including: commitizen git commit syntax, a branching strategy, SonarQube/JaCoCo reports, linters, code formatters, and branch restrictions
+			\end{itemize} \\
 		
-		\addvspace{.4cm}
-		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Education 
-			& \Large\bf{Bachelor of Science in Computer Science  \hfill 2016} \\
-			& \large{The University of Georgia - Athens, GA} \\
-				& \hspace{1.75em}GPA: 3.4/4.0 \\
-		\end{tabularx}
+			& \large\bf{Software Developer \hfill {General Motors} \hfill 04/2017 - 07/2019 } \\
+			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{2px}
+				\item Implemented Angular Components/Modules/Directives and RESTful Java APIs using a variety of Spring projects  
+				\item Created a GCP ingress to expose a front-end application to the real world and a service to allow this application to communicate with the backend pod
+				\item Pushed Docker images to GCP pods using Kubernettes and kubectl
+				\item Created a Spring Cloud config server to migrate property files into a separate API, resulting in fewer deployments
+				\item Maintained/constructed KAFKA topics and the corresponding JSON between producers/consumers
+				\item Dedicated scrum master for a 6 person development team. Helped lead scrum ceremonies for 2 week agile sprints utilizing JIRA/Confluence and its various reports
+			\end{itemize} \\
+		
+			& \large\bf{Software Engineer, Intern \hfill {Experient Group} \hfill 2016} \\
+			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{2px}
+				\item Created and allocated org, spaces, roles, and permissions for a Cloudfoundry space using the Cloud Foundry CLI
+				\item Developed and redesigned the consulting firm's public website as according to a designer's template
+				\item Created a script to disable/enable/edit Amazon Cloudwatch alarms using python 2 and the Amazon Web Services CLI
+			\end{itemize} \\
+		\end{tabularx} \\
 
-		\addvspace{.4cm}
+		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Skills 
+			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{0px}
+				\item[] Backend: \tab Java
+				\item[] Frontend: \tab Angular/Typescript, HTML5/CSS, jQuery
+				\item[] Databases: \tab SQL, MongoDB (light)
+				\item[] Build Tools: \tab Maven, Gradle, npm, yarn, Gitlab CI, Travis, Jenkins, Artifactory
+				\item[] Testing Frameworks: \tab JUnit, Mockito, SonarQube, Selenium, Protractor
+				\item[] Cloud Providers: \tab Amazon Web Services, Google Cloud Platform (light)
+				\item[] Programming Tools:\tab Docker, Kubernettes, oh-my-zsh, Postman, Swagger
+			\end{itemize}
+		\end{tabularx} \\
+
+		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Education 
+			& \large\bf{Bachelor of Science in Computer Science  \hfill 2016} \\
+			& \large{The University of Georgia - Athens, GA} \\
+			 	& \hspace{1.75em}GPA: 3.5/4.0 \\
+		\end{tabularx} \\
+
+		\addvspace{.5cm}
+
 		\parindent4em\textit{Code samples and additional projects are accessible at \url{https://stevenking.net}}
 	\end{center}
 \end{document}
