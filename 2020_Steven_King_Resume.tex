@@ -1,14 +1,11 @@
 \documentclass[final]{letter}
 
+\usepackage{tabularx}
 \usepackage{nopageno}
-\usepackage{rotating}
 \usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage[normalem]{ulem}
 \usepackage{comment}
-\usepackage{fullpage}
-\usepackage{tabularx} % For adjustable-column-width tables
-\usepackage{fix-cm} % For XL font
+\usepackage{fix-cm}
+\usepackage{geometry}
 \usepackage{tabto}
 \usepackage{enumitem}
 
@@ -18,70 +15,78 @@
 	urlcolor={blue}
 }
 
-\addtolength{\textwidth}{1.2in}
-\addtolength{\hoffset}{-.7in}
-\addtolength{\voffset}{-.75in}
-\addtolength{\textheight}{3cm}
-
+\geometry{margin=.4in}
 \NumTabs{3}
 
 \begin{document}
 	\begin{center}
-		{\fontsize{36}{43.2}\selectfont\bf{Steven King}} \hspace{.1cm} {
-			\begin{tabular}{c}\large\bf{\href{mailto:career@stevenking.net}{career@stevenking.net} \hspace{.2cm} 775-572-8773 (Google Voice)} \end{tabular}}
-		
-		\rule{.99\textwidth}{1pt}	
-
-		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Employment 
-			& \large\bf{Software Engineer \hfill {Truist Financial} \hfill 08/2019 - Present} \\
-			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{2px}
-				\item Participated in back-end web application development to support Truist's Wealth and Robo-advisor platforms using Java and Amazon Web Services
-				\item Practiced continuous integration for 20 Spring Boot microservices by producing semantically versioned artifacts using GitLab CI/CD, Docker, and Artifactory. Then, continuously delivering them to Amazon Fargate and on-premise Red Hat servers 
-				\item Contributed to creating a suite of financial components using Angular 9 and Highcharts to support a full stack development initiative
-				\item Introduced Liquibase Enterprise/Datical into project workflows allowing automated and version controlled database updates
-				\item Developed various, miscellaneous scripts using Node.js to support developers and encourage automation. Scheduled via cron jobs or deployed to AWS Lamdba
-				\item Ingested critical Java APIs' logback files into Splunk, producing weekly reports, custom dashboards, and automated emails/notifications to appropriate resources upon failures
-				\item Standardized, led, and enforced best coding practices including: Commitizen git commit syntax, a branching strategy, SonarQube/JaCoCo reports, custom checkstyle.xml code format, automated security scans, and branch restrictions. All enforced within pipelines
-			\end{itemize} \\
-		
-			& \large\bf{Software Developer \hfill {General Motors} \hfill 04/2017 - 07/2019} \\
-			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{2px}
-				\item Developed RESTful APIs and a front-end to support the "Over the Air Vehicle Updates" platform using Spring Boot, Angular, Kubernetes, and Google Cloud Platform
-				\item Created a Spring Cloud Config server to migrate property files into an external configuration, resulting in fewer deployments
-				\item Aided in migrating from on-prem to Google Cloud Platform. Specifically through creating a helm chart, creating a GKE ingress to expose the front-end application to the real world, and a GKE service for the front-end to communicate with backend pods. 
-				\item Constructed and maintained Kafka topics and the corresponding JSON between producers/consumers
-				\item Documented and recorded information into Atlassian Confluence pages whenever possible
-			\end{itemize} \\
-		
-			& \large\bf{Software Engineer, Intern \hfill {Experient Group} \hfill 2016} \\
-			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{2px}
-				\item Created a script to disable/enable/edit Amazon CloudWatch alarms using Python 2 and the AWS CLI
-				\item Allocated spaces, roles, and permissions to Cloud Foundry using the cf CLI
-				\item Developed and redesigned the consulting firm's public website as according to a designer's template
-			\end{itemize} \\
-		\end{tabularx} \\
-
-		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Skills 
-			& \begin{itemize}[noitemsep,topsep=0pt]\setlength\itemsep{-1px}
-				\item[] Back-end: \tab Java, Node.js (intermediate)
-				\item[] Front-end: \tab Angular (light/intermediate)
-				\item[] Databases: \tab SQL, MongoDB (light)
-				\item[] Build Tools: \tab Maven, Gradle, npm, yarn, GitLab Runner, Travis, Jenkins (light)
-				\item[] Testing Frameworks: \tab JUnit, Mockito, Selenium, Karma
-				\item[] Cloud Providers: \tab Amazon Web Services, Google Cloud Platform
-				\item[] Version Control: \tab Git, Artifactory
-				\item[] Programming Tools:\tab Docker, oh-my-zsh, Postman, Swagger, WireMock
-			\end{itemize}
-		\end{tabularx} \\
-
-		\begin{tabularx}{\linewidth}{>{\raggedright\bf\Large{}}p{10.75em}X} Education 
-			& \large\bf{Bachelor of Science in Computer Science  \hfill 2016} \\
-			& \large{The University of Georgia - Athens, GA} \\
-		\end{tabularx} \\
-
-
-		\addvspace{.28cm}
-
-		\parindent6em\textit{Code samples and additional projects are accessible at \url{https://stevenking.net}}
+		\bf\large {\fontsize{34}{12}\selectfont Steven King} \hfill \href{mailto:career@stevenking.net}{career@stevenking.net} \hfill 775-572-8773 (Google Voice) 
 	\end{center}
+	
+	\rule{\textwidth}{1pt}	
+
+	\begin{tabularx}{\linewidth}{
+		>{\raggedright\bf\Large} p{9em}X
+		>{}X
+	} 
+		Employment & \quad\large\bf{Software Engineer \hfill {Truist Financial} \hfill 08/2019 - Present} \\
+		& \begin{itemize}[topsep=1pt,noitemsep]
+			\item Participated in back-end web application development to support Truist's Wealth and Robo-advisor platforms using Java and Amazon Web Services
+			\item Practiced continuous integration for 20 Spring Boot microservices by producing semantically versioned artifacts using GitLab CI/CD, Docker, and Artifactory. Then, continuously delivering them to Amazon Fargate and on-premise Red Hat servers 
+			\item Contributed to creating a suite of financial components using Angular 9 and Highcharts to support a full stack development initiative
+			\item Introduced Liquibase Enterprise/Datical into project workflows allowing automated and version controlled database updates
+			\item Developed various, miscellaneous scripts using Node.js to support developers and encourage automation. Scheduled via cron jobs or deployed to AWS Lamdba
+			\item Ingested critical Java APIs' logback files into Splunk, producing weekly reports, custom dashboards, and automated emails/notifications to appropriate resources upon failures
+			\item Standardized, led, and enforced best coding practices including: Commitizen git commit syntax, a branching strategy, SonarQube/JaCoCo reports, custom checkstyle.xml code format, automated security scans, and branch restrictions. All enforced within pipelines
+		\end{itemize} \\
+			
+		& \large\bf{Software Developer \hfill {General Motors} \hfill 04/2017 - 07/2019} \\
+		& \begin{itemize}[topsep=1pt,noitemsep]
+			\item Developed RESTful APIs and a front-end to support the "Over the Air Vehicle Updates" platform using Spring Boot, Angular, Kubernetes, and Google Cloud Platform
+			\item Created a Spring Cloud Config server to migrate property files into an external configuration, resulting in fewer deployments
+			\item Aided in migrating from on-prem to Google Cloud Platform. Specifically through creating a helm chart, creating a GKE ingress to expose the front-end application to the real world, and a GKE service for the front-end to communicate with backend pods. 
+			\item Constructed and maintained Kafka topics and the corresponding JSON between producers/consumers
+			\item Documented and recorded information into Atlassian Confluence pages whenever possible
+		\end{itemize} \\
+	
+		& \large\bf{Software Engineer, Intern \hfill {Experient Group} \hfill 2016} \\
+		& \begin{itemize}[topsep=1pt,noitemsep]
+			\item Created a script to disable/enable/edit Amazon CloudWatch alarms using Python 2 and the AWS CLI
+			\item Allocated spaces, roles, and permissions to Cloud Foundry using the cf CLI
+			\item Developed and redesigned the firm's public website according to a designer's template
+		\end{itemize}
+	\end{tabularx} \\
+
+	\begin{tabularx}{\linewidth}{
+		>{\raggedright\bf\Large}p{9em}X
+		>{\centering}X
+	} 
+		Skills & \begin{itemize}[topsep=1pt,noitemsep]
+			\item[] Back-end: \tab Java, Node.js (intermediate)
+			\item[] Front-end: \tab Angular (light/intermediate)
+			\item[] Databases: \tab SQL, MongoDB (light)
+			\item[] Build Tools: \tab Maven, Gradle, npm, yarn, GitLab Runner, Travis, Jenkins (light)
+			\item[] Testing Frameworks: \tab JUnit, Mockito, Selenium, Karma
+			\item[] Cloud Providers: \tab Amazon Web Services, Google Cloud Platform
+			\item[] Version Control: \tab Git, Artifactory
+			\item[] Programming Tools:\tab Docker, oh-my-zsh, Postman, Swagger, WireMock
+		\end{itemize}
+	\end{tabularx} \\
+
+	\begin{tabularx}{\linewidth} {
+		>{\raggedright\bf\Large}p{10em}X
+		>{\centering}X
+	} 
+		Education \& & \large\bf{B.S. Computer Science \hfill 2012 - 2016} \\
+		Certifications & The University of Georgia - Athens, GA \\
+		& \\
+		& AWS Certified Developer - Associate \hfill 2021 - 2024
+	\end{tabularx}
+
+	\vspace{1.5em}
+
+	\begin{center}
+		Code samples and additional projects are accessible at \href{https://stevenking.net}{https://stevenking.net}
+	\end{center}
+
 \end{document}
